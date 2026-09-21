@@ -1,11 +1,11 @@
-import "./App.css";
+export default function App() {
+  function handleClick() {
+    console.log("Button clicked");
+  }
 
-function App() {
   return (
-    <>
-      <div>Hello</div>
-    </>
+    <button className="" onClick={handleClick}>
+      I don't do anything
+    </button>
   );
 }
-
-export default App;
