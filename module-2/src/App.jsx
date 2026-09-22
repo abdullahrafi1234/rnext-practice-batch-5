@@ -5,7 +5,7 @@ export default function App() {
 
   return (
     <button className="" onClick={handleClick}>
-      I don't do anything
+      Click Here
     </button>
   );
 }
