@@ -19,7 +19,7 @@
 
 //     // <button
 //     //   onClick={() => {
-//     //     alert("You clicked on arrow function");
+//     //    console.log("You clicked on arrow function");
 //     //   }}
 //     // >
 //     //   I dont do anything
@@ -27,24 +27,38 @@
 //   );
 // }
 
-export default function App() {
-  return (
-    <Toolbar
-      onPlayMovie={() => alert("Playing!")}
-      onUploadImage={() => alert("Uploading!")}
-    />
-  );
-}
+// export default function App() {
+//   return (
+//     <Toolbar
+//       onPlayMovie={() =>console.log("Playing!")}
+//       onUploadImage={() =>console.log("Uploading!")}
+//     />
+//   );
+// }
 
-function Toolbar({ onPlayMovie, onUploadImage }) {
+// function Toolbar({ onPlayMovie, onUploadImage }) {
+//   return (
+//     <div>
+//       <Button onSmash={onPlayMovie}>Play Movie</Button>
+//       <Button onSmash={onUploadImage}>Upload Image</Button>
+//     </div>
+//   );
+// }
+
+// function Button({ onSmash, children }) {
+//   return <button onClick={onSmash}>{children}</button>;
+// }
+
+export default function Toolbar() {
   return (
-    <div>
-      <Button onSmash={onPlayMovie}>Play Movie</Button>
-      <Button onSmash={onUploadImage}>Upload Image</Button>
+    <div
+      className="Toolbar"
+      onClick={() => {
+        console.log("You clicked on the toolbar!");
+      }}
+    >
+      <button onClick={() => console.log("Playing!")}>Play Movie</button>
+      <button onClick={() => console.log("Uploading!")}>Upload Image</button>
     </div>
   );
-}
-
-function Button({ onSmash, children }) {
-  return <button onClick={onSmash}>{children}</button>;
 }
