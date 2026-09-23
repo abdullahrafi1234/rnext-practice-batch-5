@@ -4,8 +4,16 @@ export default function App() {
   }
 
   return (
-    <button className="" onClick={handleClick}>
-      Click Here
+    // <button className="bg-amber-200" onClick={handleClick}>
+    //   Click Here
+    // </button>
+
+    <button
+      onClick={() => {
+        alert("You clicked");
+      }}
+    >
+      I dont do anything
     </button>
   );
 }
