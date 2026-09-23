@@ -49,16 +49,45 @@
 //   return <button onClick={onSmash}>{children}</button>;
 // }
 
-export default function Toolbar() {
+//stop propagation ========>
+// function Button({ onSmash, children }) {
+//   return (
+//     <button
+//       onClick={(e) => {
+//         e.stopPropagation();
+//         onSmash();
+//       }}
+//     >
+//       {children}
+//     </button>
+//   );
+// }
+
+// export default function Toolbar() {
+//   return (
+//     <div
+//       className="Toolbar"
+//       onClick={() => {
+//         alert("You clicked on the toolbar!");
+//       }}
+//     >
+//       <Button onSmash={() => alert("Playing!")}>Play Movie</Button>
+//       <Button onSmash={() => alert("Uploading!")}>Upload Image</Button>
+//     </div>
+//   );
+// }
+
+// Preventing default behavior=======>
+export default function Signup() {
   return (
-    <div
-      className="Toolbar"
-      onClick={() => {
-        console.log("You clicked on the toolbar!");
+    <form
+      onSubmit={(e) => {
+        console.dir(e);
+        e.preventDefault();
       }}
     >
-      <button onClick={() => console.log("Playing!")}>Play Movie</button>
-      <button onClick={() => console.log("Uploading!")}>Upload Image</button>
-    </div>
+      <input />
+      <button>Send</button>
+    </form>
   );
 }
